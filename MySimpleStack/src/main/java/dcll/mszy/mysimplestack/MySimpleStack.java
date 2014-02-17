@@ -43,12 +43,7 @@ public class MySimpleStack {
 	* @throws EmptyStackException if this stack is empty.
 	*/
 	public Item pop() throws EmptyStackException {
-		if(!isEmpty()) {
-			Item i = s.get(s.size()-1);
-			s.remove(s.size()-1);
-			return i;
-		}
-		else
-			throw new EmptyStackException();
+		Item i = peek();
+		return i;
 	}
 }
